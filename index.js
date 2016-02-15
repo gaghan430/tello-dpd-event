@@ -2,7 +2,7 @@
  * @Author: Dodik Gaghan
  * @Date:   2016-02-15 09:39:55
  * @Last Modified by:   Dodik Gaghan
- * @Last Modified time: 2016-02-15 10:41:23
+ * @Last Modified time: 2016-02-15 11:48:00
  */
 
 'use strict';
@@ -18,6 +18,8 @@ util.inherits(MozzooEventResource, Resource);
 
 MozzooEventResource.label = "Mozzoo Event";
 MozzooEventResource.events = ["get", "post", "put", "delete"];
+
+module.exports = MozzooEventResource;
 
 MozzooEventResource.prototype.clientGeneration = true;
 MozzooEventResource.prototype.handle = function(ctx, next) {
