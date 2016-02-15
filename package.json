@@ -1,0 +1,25 @@
+{
+  "name": "tello-dpd-event",
+  "version": "1.0.0",
+  "description": "Deployd Custom Event",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gaghan430/tello-dpd-event.git"
+  },
+  "keywords": [
+    "deployd",
+    "event",
+    "custom",
+    "event"
+  ],
+  "author": "dodik gaghan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gaghan430/tello-dpd-event/issues"
+  },
+  "homepage": "https://github.com/gaghan430/tello-dpd-event#readme"
+}
