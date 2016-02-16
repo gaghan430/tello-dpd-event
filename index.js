@@ -2,7 +2,7 @@
  * @Author: Dodik Gaghan
  * @Date:   2016-02-15 09:39:55
  * @Last Modified by:   Dodik Gaghan
- * @Last Modified time: 2016-02-16 08:47:25
+ * @Last Modified time: 2016-02-16 09:45:40
  */
 
 'use strict';
@@ -17,10 +17,8 @@ function EventResource() {
 util.inherits(EventResource, Resource);
 
 EventResource.label = "Event";
+EventResource.defaultPath = '/event';
 EventResource.events = ["get", "post", "put", "delete"];
-
-module.exports = EventResource;
-
 EventResource.prototype.clientGeneration = true;
 EventResource.prototype.handle = function(ctx, next) {
 	var result = {};
@@ -59,3 +57,5 @@ EventResource.prototype.handle = function(ctx, next) {
 		next();
 	}
 }
+
+module.exports = EventResource;
