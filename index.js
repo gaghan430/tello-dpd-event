@@ -2,7 +2,7 @@
  * @Author: Dodik Gaghan
  * @Date:   2016-02-15 09:39:55
  * @Last Modified by:   Dodik Gaghan
- * @Last Modified time: 2016-02-16 09:45:40
+ * @Last Modified time: 2016-02-16 15:08:09
  */
 
 'use strict';
@@ -16,7 +16,7 @@ function EventResource() {
 }
 util.inherits(EventResource, Resource);
 
-EventResource.label = "Event";
+EventResource.label = "Custom Event";
 EventResource.defaultPath = '/event';
 EventResource.events = ["get", "post", "put", "delete"];
 EventResource.prototype.clientGeneration = true;
@@ -45,11 +45,11 @@ EventResource.prototype.handle = function(ctx, next) {
 		this.events.get.run(ctx, domain, function(err) {
 			ctx.done(err, result);
 		});
-	}  else if (ctx.method === "PUT" && this.events.put) {
+	} else if (ctx.method === "PUT" && this.events.put) {
 		this.events.put.run(ctx, domain, function(err) {
 			ctx.done(err, result);
 		});
-	}  else if (ctx.method === "DELETE" && this.events.delete) {
+	} else if (ctx.method === "DELETE" && this.events.delete) {
 		this.events.delete.run(ctx, domain, function(err) {
 			ctx.done(err, result);
 		});
