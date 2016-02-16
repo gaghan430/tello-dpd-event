@@ -2,7 +2,7 @@
  * @Author: Dodik Gaghan
  * @Date:   2016-02-15 09:39:55
  * @Last Modified by:   Dodik Gaghan
- * @Last Modified time: 2016-02-15 11:48:00
+ * @Last Modified time: 2016-02-16 08:47:25
  */
 
 'use strict';
@@ -11,18 +11,18 @@ var Resource = require('deployd/lib/resource');
 var Script = require('deployd/lib/script');
 var util = require('util');
 
-function MozzooEventResource() {
+function EventResource() {
 	Resource.apply(this, arguments);
 }
-util.inherits(MozzooEventResource, Resource);
+util.inherits(EventResource, Resource);
 
-MozzooEventResource.label = "Mozzoo Event";
-MozzooEventResource.events = ["get", "post", "put", "delete"];
+EventResource.label = "Event";
+EventResource.events = ["get", "post", "put", "delete"];
 
-module.exports = MozzooEventResource;
+module.exports = EventResource;
 
-MozzooEventResource.prototype.clientGeneration = true;
-MozzooEventResource.prototype.handle = function(ctx, next) {
+EventResource.prototype.clientGeneration = true;
+EventResource.prototype.handle = function(ctx, next) {
 	var result = {};
 	var parts = ctx.url.split('/').filter(function(p) {
 		return p;
